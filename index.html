@@ -16,38 +16,48 @@
         src: url(/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
     }
     @font-face {
-        font-family: 'Arial';
-        src: url(/assets/fonts/Arial/Arimo-Regular.ttf);
-    }    
+        font-family: 'exo_2';
+        src: url(/assets/fonts/Exo_2/Exo2-Italic-VariableFont_wght.ttf);
+    }
     :root {
         --white: #ffffff;
-        --yelloworange:#e17d2d;
+        --yelloworange:#E27A29;
         --text-gray:#4A4A4A;
         --icon-red:#D0021B;
         --light-blue:#14a8ad;
+        --bg-lightgray:#F5F5F5;
     }
     body{
         /* max-width: 1030px; */
         /* margin: auto; */
-        font-family: "Arial", sans-serif;
+        font-family: Arial, sans-serif;
     }
 
     h1,h2,h3,h4,h5{
         font-family: 'Montserrat';
     }
 
+    .lg-back{
+        background-color: var(--bg-lightgray);
+;
+    }
 
 
-    .header-h3{
+
+    .hero-header{
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 25px;
         color: var(--yelloworange); 
-        font-weight: bold;
-        width: 275px;
-        font-size: 22px;
+        width: 269px;
+        line-height: 30px;
+        
+
     }
     .btn{
         background-color: var(--yelloworange);
         font-size:14px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, sans-serif;
     }
 
     .y-border{
@@ -64,18 +74,20 @@
 
 
     .boxed-header{
-        color: var(--yelloworange);
-        font-size: 30px;
         font-family: 'Montserrat';
         font-weight: 700;
+        font-size: 30px;
         line-height: 22px;
-        margin-bottom: 10px;
+        color: var(--yelloworange);
+        margin-bottom: 11px;
     }
 
     .boxed-text{
         color: var(--text-gray);
-        font-size: 9px;
-        font-family: 'Arial';
+        font-size: 11px;
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        line-height: 12.65px;
     }
 
 
@@ -96,14 +108,32 @@
 
 
     .hero-text{
-        font-size:12px;
-        width: 244px;
+        width: 275px;
+        height: 60px;
+        left: 165px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
     }
     .hero{
-        background-repeat:no-repeat;
         background-image:url(/assets/images/Hero_Banner.png);
-        background-size: cover;
-        height: 50vh;
+        height: 65vh;
+        background-repeat:no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: relative;
+    }
+
+    
+    
+    
+    
+    
+
+    .img-content{
+        width: 100%;
     }
     
     .article-with{
@@ -114,24 +144,60 @@
         color: var(--text-gray);
         font-weight: 700;
         font-size: 20px;
+        font-family: 'Montserrat';
+        line-height: 24.38px;
     }
+
+    .section-header-2{
+        color: var(--text-gray);
+        font-family: 'exo_2';
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26.4px;
+        text-align: center;
+    }
+
+
+
+
+
     .article-text{
-        font-family: 'Arial';
+        font-family: Arial, sans-serif;
         font-weight: 400;
         font-size: 13px;
         line-height: 18px;
         color: var(--text-gray);
-        
+    }
 
+    p.article-text{
+        margin: 0px;
     }
 
     .section-padding{
-        padding: 0 20%;
+        padding: 30px 20%;
     }
     .text-15 {
-    font-size: 15px;
-    letter-spacing: 0px;
+        font-size: 15px;
+        letter-spacing: 0px;
+        margin: 8.76px 0px;
     }
+
+    section#support {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .support-image{
+        height: 122.97px;
+        width: auto;
+        margin-bottom:10px;
+        
+    }
+    .support-image img{
+        max-height: 100%;
+    }
+
+
 
     .icon-container{
         height: 35px;
@@ -158,6 +224,11 @@
     }
     .rights{
         color: var(--light-blue);
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 13;
+        line-height: 24px;
+
     }
 
 
@@ -188,6 +259,13 @@
         }
     }
 
+    @media (max-width: 1030px) {
+        .hero{
+            background-size: cover;
+            background-position: right;
+        }
+    }
+
     footer{
         background-image: url(/assets/images/footer.png);
         height: fit-content;
@@ -204,22 +282,23 @@
             <div class="row flex-lg-row-reverse align-items-center">
               
               <div class="col-lg-12 px-5">
-                <h3 class="header-h3 mb-0">Voice of the Martyrs Philippines</h3>
-                <p class="my-4 hero-text text-white">Ang Voice of the Martyrs ay nakatuon sa pagiging isang boses para sa mga inuusig na Kristiyano sa pamamagitan ng pagbabahagi ng kanilang mga kuwento.</p>
+                <h3 class="hero-header mb-0">Voice of the Martyrs Philippines</h3>
+                <p class="my-4 hero-text text-white">Voice of the Martyrs is dedicated to being a voice for persecuted Christians by sharing their stories.</p><!-- Ang Voice of the Martyrs ay nakatuon sa pagiging isang boses para sa mga inuusig na Kristiyano sa pamamagitan ng pagbabahagi ng kanilang mga kuwento. -->
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     <a href="#" class="py-3 px-5 btn text-white">Pray With Us</a>
-                    
                 </div>
               </div>
             </div>
           </div>
     </section>
-    <section class="section-padding my-4 d-flex justify-content-center flex-column">
+    <section class="lg-back section-padding d-flex justify-content-center flex-column">
         <!-- <h6 class="section-header text-center">Mahingkayat. Maging inspirasyon. Maging boses nila.</h6> -->
         <h6 class="section-header text-center">Encourage. Inspire. Be their voice.</h6>
+        <br>
         <div class="article-with m-auto d-flex justify-content-center flex-column">
             <!-- <p class="text-center article-text">Ang Voice of the Martyrs ay nakatuon sa pagiging isang boses para sa mga inuusig na Kristiyano. Sa diwa ng aming tagapamuno na si Richard Wurmbrand, ang Voice of the Martyrs ay nakalikom ng pera upang direktang suportahan ang mga inuusig na Kristiyano. Marami sa aming mga kampanya at proyekto ang nagbibigay ng mga Bibliya, mga mapagkukunan ng ministeryo, tulong medikal at praktikal na tulong sa mahigit 60 bansa sa buong mundo.</p> -->
             <p class="text-center article-text">Voice of the Martyrs is dedicated to being a voice for persecuted Christians. In the spirit of our leader Richard Wurmbrand, Voice of the Martyrs raises money to directly support persecuted Christians. Many of our campaigns and projects provide Bibles, ministry resources, medical aid, and practical help in over 60 countries around the world.</p>
+            <br>
             <!-- <p class="text-center article-text">Pinapagana namin ang aming mga pangunahing kampanya sa buong taon ngunit gumagawa din kami ng iba pang mga proyekto sa pagpopondo upang patuloy na palawakin ang aming pag-abot sa mga nahihirapang bansa. Narito ang ilan sa aming mga kampanya na nakagawa ng pagbabago.</p> -->
             <p class="text-center article-text">We run our main campaigns throughout the year but we also work on other funding projects to continue to expand our reach in struggling countries. Here are some of our campaigns that have made a difference.
             </p>
@@ -229,16 +308,16 @@
             <div class="col-12 col-xs-6 col-sm-6 col-md-3">
                 <div class="row">
                     <div class="text-center col-12">
-                        <img class="img-fluid" src="/assets/images/bible_plus.png" alt="Bible Plus">
+                        <img class="img-content img-fluid" src="/assets/images/bible_plus.png" alt="Bible Plus">
                     </div>
-                    <div class="text-15 text-center col-12">Bible Plus</div>
+                    <div class="text-15 text-center col-12">Bibles Plus</div>
                 </div>
 
             </div>
             <div class="col-12 col-xs-6 col-sm-6 col-md-3">
                 <div class="row">
                     <div class="text-center col-12">
-                        <img class="img-fluid" src="/assets/images/bibles_and_literature.png" alt="bibles and literature">
+                        <img class="img-content img-fluid" src="/assets/images/bibles_and_literature.png" alt="bibles and literature">
                     </div>
                     <div class="text-15 text-center col-12">Bibles & Literature</div>
                 </div>
@@ -246,17 +325,17 @@
             <div class="col-12 col-xs-6 col-sm-6 col-md-3">
                 <div class="row">
                     <div class="text-center col-12">
-                        <img class="img-fluid" src="/assets/images/font_line_ministry.png" alt="font line ministry">
+                        <img class="img-content img-fluid" src="/assets/images/font_line_ministry.png" alt="Front Line Ministry">
                     </div>
-                    <div class="text-15 text-center col-12">Font Line Ministry</div>
+                    <div class="text-15 text-center col-12">Front Line Ministry</div>
                 </div>
             </div>
             <div class="col-12 col-xs-6 col-sm-6 col-md-3">
                 <div class="row">
                     <div class="text-center col-12">
-                        <img class="img-fluid" src="/assets/images/VOMS_Medical.png" alt="VOMS Medical">
+                        <img class="img-content img-fluid" src="/assets/images/VOMS_Medical.png" alt="VOM Medical">
                     </div>
-                    <div class="text-15 text-center col-12">VOMS Medical</div>
+                    <div class="text-15 text-center col-12">VOM Medical</div>
                 </div>
             </div>
             
@@ -267,7 +346,7 @@
         <div class="d-flex justify-content-center"><button  class="py-3 px-4 btn text-white mt-3">Pray With Us</button></div>
         
     </section>
-    <section class="section-padding my-4 d-flex justify-content-center flex-column">
+    <section class="section-padding d-flex justify-content-center flex-column">
         <!-- <h6 class="section-header text-center">Halimbawa ng aming nakamit sa taong 2021</h6> -->
         <h6 class="section-header text-center">Example of what we achieved in the year 2021</h6>
         
@@ -302,7 +381,7 @@
 
         <div class="row">
             <div class="article-image col-12 col-xs-12 col-md-12 col-lg-6">
-                <img class="img-fluid" src="/assets/images/bibles_plus_article.png" alt="">
+                <img class="img-content img-fluid" src="/assets/images/bibles_plus_article.png" alt="">
             </div>
             <div class="col-12 col-xs-12 col-md-12 col-lg-6">
                 <p class="article-text">
@@ -326,31 +405,22 @@
         
         
     </section>
-    <section class="section-padding my-4 d-flex justify-content-center flex-column">
-        <h6 class="section-header text-center">
-            <!-- Bakit kailangan mo mag supporta sa VOM? -->
-            Why do you need to support VOM?
-        </h6>
+    <section id="support" class="lg-back section-padding d-flex justify-content-center flex-column">
+        <h6 class="section-header-2 text-center">Why do you need to support VOM?</h6><!-- Bakit kailangan mo mag supporta sa VOM? -->
         
         <div class="row">
             <div class="col-12 col-xs-6 col-md-6">
-                <div class="p-3 d-flex justify-content-center align-items-center"><img src="/assets/images/more_than_50_years.png" alt="More than 50 years"></div>
-                <p class="article-text">
-                    <!-- History Mula noong 1969, ang Voice of the Martyrs ay nagbibigay ng pag-asa sa mga pinag-uusig na Kristiyano sa buong mundo. Sa diwa ng aming tagapamuno na si Richard Wurmbrand, ang Voice of the Martyrs ay nakalikom ng pera upang direktang suportahan ang mga inuusig na Kristiyano. -->
-                    History Since 1969, Voice of the Martyrs has been giving hope to persecuted Christians around the world. In the spirit of our leader Richard Wurmbrand, Voice of the Martyrs raises money to directly support persecuted Christians.
-                </p>
+                <div class="support-image"><img src="/assets/images/more_than_50_years.png" alt="More than 50 years"></div>
+                <p class="article-text">History Since 1969, Voice of the Martyrs has been giving hope to persecuted Christians around the world. In the spirit of our leader Richard Wurmbrand, Voice of the Martyrs raises money to directly support persecuted Christians.</p><!-- History Mula noong 1969, ang Voice of the Martyrs ay nagbibigay ng pag-asa sa mga pinag-uusig na Kristiyano sa buong mundo. Sa diwa ng aming tagapamuno na si Richard Wurmbrand, ang Voice of the Martyrs ay nakalikom ng pera upang direktang suportahan ang mga inuusig na Kristiyano. -->
             </div>
             <div class="col-12 col-xs-6 col-md-6">
-                <div class="p-3 d-flex justify-content-center align-items-center"><img src="/assets/images/globe.png" alt="global "></div>
-                <p class="article-text">
-                    <!-- Ang Voice of the Martyrs ay nakatuon sa pagiging isang boses para sa mga inuusig na Kristiyano. Marami sa aming mga kampanya at proyekto ang nagbibigay ng mga Bibliya, mga mapagkukunan ng ministeryo, tulong medikal at praktikal na tulong sa mahigit 60 bansa sa buong mundo. -->
-                    Voice of the Martyrs is dedicated to being a voice for persecuted Christians. Many of our campaigns and projects provide Bibles, ministry resources, medical aid, and practical help in over 60 countries around the world.
-                </p>
+                <div class="support-image"><img src="/assets/images/globe.png" alt="global "></div>
+                <p class="article-text">Voice of the Martyrs is dedicated to being a voice for persecuted Christians. Many of our campaigns and projects provide Bibles, ministry resources, medical aid, and practical help in over 60 countries around the world.</p><!-- Ang Voice of the Martyrs ay nakatuon sa pagiging isang boses para sa mga inuusig na Kristiyano. Marami sa aming mga kampanya at proyekto ang nagbibigay ng mga Bibliya, mga mapagkukunan ng ministeryo, tulong medikal at praktikal na tulong sa mahigit 60 bansa sa buong mundo. -->
             </div>
         </div>
     </section>
-    <section>
-        <h6 class="section-header text-center">Pray with Us, Follow us</h6>
+    <section class="section-padding">
+        <h6 class="section-header-2 text-center">Pray with Us, Follow us</h6>
         <div class="my-3 social-media d-flex justify-content-center align-items-center gap-5" >
             <div class="socialicon-container d-flex gap-2">
                 <div class="icon-container"><i class="fa-brands fa-facebook-f"></i></div>
@@ -362,8 +432,11 @@
                 <div class="article-text d-flex justify-content-center align-items-center">@vomphilippines</div>
             </div>
         </div>
-        <div class="gallery d-flex justify-content-center align-items-center">
-            <img class="img-fluid" src="/assets/images/gallery.png" alt="">            
+        <div class="row">
+            <div class="col-12">
+                <img class="mb-3 img-fluid" src="/assets/images/gallery.png" alt="">            
+            </div>
+            
         </div>
     </section>
         
