@@ -19,6 +19,7 @@
         font-family: 'exo_2';
         src: url(/assets/fonts/Exo_2/Exo2-Italic-VariableFont_wght.ttf);
     }
+    
     :root {
         --white: #ffffff;
         --yelloworange:#E27A29;
@@ -42,8 +43,21 @@
 ;
     }
 
+    #instafeed-container{
+        display: flex;
+        gap:20px;
 
+    }
 
+    #instafeed-container img{
+        width: 100%;
+        height: auto;
+    }
+
+    /* limits the number of images show */
+    #instafeed-container a:nth-of-type(1n+6){
+        display: none;
+    }
     .hero-header{
         font-family: 'Montserrat';
         font-weight: 700;
@@ -231,15 +245,19 @@
 
     }
 
+    /* a img{ 
+        width: 25%;
+    } */
 
-    @media (min-width: 1220px) {
-        .article-image{
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
+    footer{
+        background-image: url(/assets/images/footer.png);
+        height: fit-content;
+        
     }
-    
+
+
+
+
 
     @media (max-width: 767px) {
         .middle-box{
@@ -253,24 +271,26 @@
             margin-bottom: 10px;
         }
     }
-    @media only screen and (max-width: 1030px) {
-        .article-with{
-            max-width: 615px;
-        }
-    }
 
     @media (max-width: 1030px) {
         .hero{
             background-size: cover;
             background-position: right;
+            height: 55vh;
+        }
+        .article-with{
+            max-width: 615px;
+        }
+    }
+    @media (min-width: 1220px) {
+        .article-image{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
         }
     }
 
-    footer{
-        background-image: url(/assets/images/footer.png);
-        height: fit-content;
-        
-    }
+
 </style>
 <body>
 
@@ -293,15 +313,14 @@
     </section>
     <section class="lg-back section-padding d-flex justify-content-center flex-column">
         <!-- <h6 class="section-header text-center">Mahingkayat. Maging inspirasyon. Maging boses nila.</h6> -->
-        <h6 class="section-header text-center">Encourage. Inspire. Be their voice.</h6>
-        <br>
-        <div class="article-with m-auto d-flex justify-content-center flex-column">
+        <h6 class="pb-2 section-header text-center">Encourage. Inspire. Be their voice.</h6>
+        <div class="article-with m-auto d-flex justify-content-center flex-column pb-4">
             <!-- <p class="text-center article-text">Ang Voice of the Martyrs ay nakatuon sa pagiging isang boses para sa mga inuusig na Kristiyano. Sa diwa ng aming tagapamuno na si Richard Wurmbrand, ang Voice of the Martyrs ay nakalikom ng pera upang direktang suportahan ang mga inuusig na Kristiyano. Marami sa aming mga kampanya at proyekto ang nagbibigay ng mga Bibliya, mga mapagkukunan ng ministeryo, tulong medikal at praktikal na tulong sa mahigit 60 bansa sa buong mundo.</p> -->
             <p class="text-center article-text">Voice of the Martyrs is dedicated to being a voice for persecuted Christians. In the spirit of our leader Richard Wurmbrand, Voice of the Martyrs raises money to directly support persecuted Christians. Many of our campaigns and projects provide Bibles, ministry resources, medical aid, and practical help in over 60 countries around the world.</p>
             <br>
             <!-- <p class="text-center article-text">Pinapagana namin ang aming mga pangunahing kampanya sa buong taon ngunit gumagawa din kami ng iba pang mga proyekto sa pagpopondo upang patuloy na palawakin ang aming pag-abot sa mga nahihirapang bansa. Narito ang ilan sa aming mga kampanya na nakagawa ng pagbabago.</p> -->
-            <p class="text-center article-text">We run our main campaigns throughout the year but we also work on other funding projects to continue to expand our reach in struggling countries. Here are some of our campaigns that have made a difference.
-            </p>
+            <p class="text-center article-text">We run our main campaigns throughout the year but we also work on other funding projects to continue to expand our reach in struggling countries. Here are some of our campaigns that have made a difference.</p>
+           
         </div>
            
         <div class="row gx-3">
@@ -379,7 +398,7 @@
             <div class="month-title">Bibles Plus 2022</div>
         </div>
 
-        <div class="row">
+        <div class="row pb-2">
             <div class="article-image col-12 col-xs-12 col-md-12 col-lg-6">
                 <img class="img-content img-fluid" src="/assets/images/bibles_plus_article.png" alt="">
             </div>
@@ -390,7 +409,7 @@
                 </p>
             </div>
         </div>
-        </div>
+        
 
         <div class="article-with m-auto d-flex justify-content-center flex-column">
             <p class="text-center article-text">
@@ -436,10 +455,24 @@
             <div class="col-12">
                 <img class="mb-3 img-fluid" src="/assets/images/gallery.png" alt="">            
             </div>
+            <div id="instafeed-container"></div>
             
         </div>
     </section>
-        
+    
+
+
+
+	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		target: "instafeed-container",
+    	resolution: 'low_resolution',
+		accessToken: 'IGQVJXLWtaZA0tabTM1ZAnRPMXYxTG5iWFgyOEs0ZAC16UWRmd01IZAEVVODk5Nzk0bVN2LXZARX0FWUGVhWXU3blhpSGU2cWg3ajM4SVRSZAHAwQmVnbVdaU2EtMG1uM2x0UWJxd2Rmd1U4Vk1RMmt2MnhSLQZDZD'
+	});
+	userFeed.run();
+	</script>
 </body>
 <footer class="d-flex justify-content-center flex-column p-5 cointainer-fluid">
 
